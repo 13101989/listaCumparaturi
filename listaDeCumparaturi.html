@@ -90,6 +90,8 @@
 									<td><input type="button" class="markAsBuyed" value="Mark as buyed" onclick="taie(this, ${i})"  /></td>
 								</tr>`
 
+
+
 						lista += rand;	
 
 						}else {
@@ -138,7 +140,13 @@
 
                 	var s=rand.parentNode.parentNode.rowIndex;
 
-                	listaCumparaturi[index].check = true;
+                	if (listaCumparaturi[index].check === false) {
+                		listaCumparaturi[index].check = true;
+                	}else{
+                		listaCumparaturi[index].check = false;
+                	}
+
+                	
 
                 	deseneazaLista();
 
